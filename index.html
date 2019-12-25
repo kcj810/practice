@@ -19,14 +19,25 @@
         color: red;
         font-size:60px;
     }
+    p {
+        text-align: center;
+    }
+    #alert {
+        text-align: center;
+    }
+    #alert input {
+        background-color:gold;
+        color: blue;
+    }
 </style>
 
 </head>
 <body>
     <h1>Write your opinion</h1>
     <p>자유롭게 의견을 적어주세요!</p>
+    <div id = 'alert'>
     <input type="button" value="alert" onclick="alert('욕설 금지!')">
-
+    </div>
     <div id="disqus_thread"></div>
 <script>
 
