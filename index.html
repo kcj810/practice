@@ -29,6 +29,11 @@
         background-color:gold;
         color: blue;
     }
+    #night_place {
+        text-align: left;
+        margin-left: 100px;
+        margin-bottom: 30px;
+    }
 
     @media(max-width: 700px){
         h1{
@@ -44,6 +49,19 @@
     <p>자유롭게 의견을 적어주세요!</p>
     <div id = 'alert'>
     <input type="button" value="alert" onclick="alert('욕설 금지!')">
+    <div id = 'night_place'>
+    <input id='night' type="button" value="night" onclick="
+    if(document.querySelector('#night').value === 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            this.value = 'day';
+        } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            this.value = 'night';
+        }
+    ">
+    </div>
     </div>
     <div id="disqus_thread"></div>
 <script>
