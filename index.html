@@ -22,6 +22,10 @@
     p {
         text-align: center;
     }
+    a {
+        text-align: center;
+        color: black;
+    }
     #alert {
         text-align: center;
     }
@@ -47,17 +51,22 @@
 <body>
     <h1>Write your opinion</h1>
     <p>자유롭게 의견을 적어주세요!</p>
+    <a href="https://github.com/kcj810?tab=repositories">My Github</a>
     <div id = 'alert'>
     <input type="button" value="alert" onclick="alert('욕설 금지!')">
     <div id = 'night_place'>
     <input id='night' type="button" value="night" onclick="
-    if(document.querySelector('#night').value === 'night'){
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
+    var body = document.querySelector('body');
+    var a = document.querySelector('a');
+    if(this.value === 'night'){
+            body.style.backgroundColor = 'black';
+            body.style.color = 'white';
+            a.style.color='white';
             this.value = 'day';
         } else {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
+            body.style.backgroundColor = 'white';
+            body.style.color = 'black';
+            a.style.color='black';
             this.value = 'night';
         }
     ">
